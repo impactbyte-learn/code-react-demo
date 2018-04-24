@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Home from "./pages/home";
 import TodoList from "./pages/TodoList";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import About from "./pages/about";
 
 class App extends Component {
   render() {
@@ -19,8 +20,9 @@ class App extends Component {
               <Link to="/about">About</Link>
             </li>
           </ul>
-          <Route path="/" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route path="/todolist" component={TodoList} />
+          <Route path="/about" component={About} />
         </div>
       </Router>
     );
